@@ -28,10 +28,13 @@ def replace_character(plaintext, key, replacement_character):
     if len(key) != 1 or len(replacement_character) != 1:
         raise ValueError("Both key and replacement_character should be a single character")
     
-    for i in range(len(plaintext)):
-        if plaintext[i] == key:
-            plaintext[i] = replacement_character
-    return plaintext
+    encoded_string = ""
+    for character in plaintext:
+        if character == key:
+            encoded_string += replacement_character
+        else:
+            encoded_string += character
+    return encoded_string
 
 if __name__ == "__main__":
     plaintext = "hello world"
