@@ -32,3 +32,9 @@ def replace_character(plaintext, key, replacement_character):
         if plaintext[i] == key:
             plaintext[i] = replacement_character
     return plaintext
+
+if __name__ == "__main__":
+    plaintext = "hello world"
+    key = "o"
+    replacement_character = "x"
+    print(replace_character(plaintext, key, replacement_character))
